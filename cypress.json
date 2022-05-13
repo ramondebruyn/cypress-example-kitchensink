@@ -1,3 +1,7 @@
 {
-  "projectId": "4b7344"
+  "projectId": "4b7344",
+  "baseUrl": "http://localhost:8080",
+  "env": {
+    "navbarText": "cypress.io"
+  }
 }

@@ -44,7 +44,7 @@ Cypress.Commands.overwrite('type', (originalFn, element, text, options) => {
     Cypress.log({
       $el: element,
       name: 'type',
-      message: '*'.repeat(text.length)
+      message: '*'.repeat(text.length),
     })
   }
 

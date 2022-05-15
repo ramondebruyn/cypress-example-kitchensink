@@ -103,6 +103,7 @@ context('Contact Us Test', () => {
       cy.wait(0)
       cy.get('.ant-select-selection-search-input').eq(0).type('{enter}', { force: true })
     })
+
     cy.wait(0)
     cy.get('.book-demo-next-btn').click()
     cy.get('.calendly-container').should('exist')

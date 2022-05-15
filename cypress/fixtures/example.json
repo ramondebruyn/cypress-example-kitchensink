@@ -1,5 +1,64 @@
 {
-  "name": "Using fixtures to represent data",
+  "baseUrl": "https://www.starlightmusic.com/",
+  "backEndUrl": "https://starbridge.starlightmusic.com/login",
+
+  "plannerFullName": "Steve Rogers",
+  "plannerAddress": "1614 Connecticut Ave NWWashington, DC 20009",
+  "plannerBirthday": "7/4/1918",
+  "plannerPhone": "570-519-8441",
+  "plannerWebsite": "www.google.com",
+  "plannerGmail": "srogers.dl0@gmail.com",
+  "plannerGmailPassword": "captainamerica501",
+  "plannerSLPassword": "CaptainAmerica501!",
+  "plannerOTPLinkURL": "https://oksms.org/receive/15705198441",
+
+  "newPlannerFullName": "Bruce Banner",
+  "newPlannerAddress": "4600 Bath, Dayton OH 45424",
+  "newPlannerBirthday": "Dec 18, 1969",
+  "newPlannerPhone": "5186726861",
+  "newPlannerWebsite": "www.google.com",
+  "newPlannerGmail": "bbanner.dl@gmail.com",
+  "newPlannerGmailPassword": "thehulk501",
+  "newPlannerSLPassword": "TheHulk501!!",
+  "newPlannerOTPLinkURL": "https://oksms.org/receive/15186726861",
+
+  "clientFullName": "Bruce Wayne",
+  "clientAddress": "1007 Mountain Drive, Gotham City, Illinois 60035, United States",
+  "clientEmail": "bwayne.dl0@gmail.com",
+  "clientPhone": "804-406-4234",
+  "clientGmail": "bwayne.dl0@gmail.com",
+  "clientGmailPassword": "batman501",
+  "clientSLPassword": "Batman501!$",
+  "clientBirthday": "4/17/1915",
+  "clientOTPUrl": "https://freephonenum.com/us/receive-sms/8044064234",
+  
+  "bandSelection": "Onyx",
+
+  "mockEventDate": "09/09/2029",
+  "mockEventVenue": "",
+  "mockEventAddress": "",
+
+  "paymentPayee": "",
+  "paymentNumber": "",
+  "paymentCvv": "",
+  "paymentExpirationDate": "",
+
+  "groomFullName": "Bruce Wayne",
+  "groomFName": "Bruce",
+  "groomLName": "Wayne",
+  "brideFullName": "Selina Kyle",
+  "brideFName": "Selina",
+  "brideLName": "Kyle",
+
+  "performerFullName": "Peter Parker",
+  "performerFName":"Peter",
+  "performerLName":"Parker",
+  "performerEmail": "pparker.dl1@gmail.com",
+  "performerPhone": "570-519-8441",
+  "performerGmailPassword": "spiderman501",
+  "performerSLPassword": "Spiderman501!",
+  "performerOTPUrl": "https://oksms.org/receive/15705198441",
+
   "email": "hello@cypress.io",
   "body": "Fixtures are a great way to mock data for responses to routes"
 }

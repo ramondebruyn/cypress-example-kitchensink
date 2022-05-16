@@ -3,5 +3,8 @@
   "baseUrl": "http://localhost:8080",
   "env": {
     "navbarText": "cypress.io"
-  }
+  },
+  "viewportHeight": 976,
+  "viewportWidth": 1920,
+  "experimentalSessionAndOrigin": true
 }

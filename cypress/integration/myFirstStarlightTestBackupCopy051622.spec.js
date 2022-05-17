@@ -11,11 +11,32 @@ const authToken = credentials.TWILIO_AUTH_TOKEN
 const client = require('twilio')(accountSid, authToken)
 
 context('Contact Us Test', () => {
+  // beforeEach(() => {
+  //   cy.viewport(1920, 976)
+  //   cy.visit('https://staging.starlightmusic.com')
+  // })
+  // beforeEach(() => {
+  //     cy.visit('https://www.starlightmusic.com')
+  // })
+
   // it('has an h1 on the page', () => {
   //   cy.get('h1').should('exist')
   // })
 
   it('can contact us', () => {
+    cy.on('uncaught:exception', (err, runnable) => {
+      expect(err.message).to.include('gtag')
+
+      // using mocha's async done callback to finish
+      // this test so we prove that an uncaught exception
+      // was thrown
+      // done()
+
+      // return false to prevent the error from
+      // failing this test
+      return false
+    })
+
     cy.visit('https://staging.starlightmusic.com/contact-us')
     cy.get('.col-md-6:nth-child(1) > .form-control').click({ force: true })
     cy.get('.col-md-6:nth-child(1) > .form-control').type('Bruce')
@@ -43,6 +64,21 @@ context('Contact Us Test', () => {
   })
 
   it('can book a demo', async function () {
+    // this event will automatically be unbound when this
+  // test ends because it's attached to 'cy'
+    cy.on('uncaught:exception', (err, runnable) => {
+      expect(err.message).to.include('gtag')
+
+      // using mocha's async done callback to finish
+      // this test so we prove that an uncaught exception
+      // was thrown
+      // done()
+
+      // return false to prevent the error from
+      // failing this test
+      return false
+    })
+
     cy.viewport(1920, 976)
     cy.visit('https://staging.starlightmusic.com/')
     // cy.get('.d-flex > .w-100 > .navbar > .w-100 > .Header_nav_link__3qapQ:nth-child(2)').click()
@@ -88,7 +124,7 @@ context('Contact Us Test', () => {
     // })
   })
 
-  it('customer can search for and book a band', () => {
+  it('customer can search for and book a band', async function () {
     cy.visit('https://staging.starlightmusic.com/')
 
     /// get event date, store event date
@@ -142,7 +178,7 @@ context('Contact Us Test', () => {
     cy.visit('https://starbridge.starlightmusic.com/')
   })
 
-  it('event planner can login', () => {
+  it('event planner can login', async function () {
     cy.visit('https://staging.starlightmusic.com/')
 
     cy.xpath('//p[@class=\"Header_nav_section_profile_detail_welcomeText__Tl1wI\"]').then((value) => {
@@ -199,7 +235,7 @@ context('Contact Us Test', () => {
     cy.xpath('//p[contains(.,\"Welcome\")]').should('contain.text', 'Welcome')
   })
 
-  it('event planner signup', () => {
+  it('event planner signup', async function () {
     cy.visit('https://staging.starlightmusic.com/')
     cy.contains('Login / Signup').click()
     cy.get('#firstName').click()

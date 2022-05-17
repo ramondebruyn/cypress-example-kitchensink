@@ -4,6 +4,9 @@
 
 // const { it } = require("mocha")
 // const myVar = undefined;
+const accountSid = 'ACfc00480345d20df6a35bfc919be5e8cd'
+const authToken = '158335fa37795a97e6fed560b71c9c14'
+const client = require('twilio')(accountSid, authToken)
 
 context('Contact Us Test', () => {
   // beforeEach(() => {
@@ -121,7 +124,6 @@ context('Contact Us Test', () => {
 
   it('customer can search for and book a band', async function () {
     cy.visit('https://staging.starlightmusic.com/')
-    // get event date
 
     /// get event date, store event date
     cy.xpath('//div[@id=\"__next\"]/div/main/div/header/div[3]/div[3]/section/div/div/div/div/input').then((element) => {
@@ -131,37 +133,26 @@ context('Contact Us Test', () => {
       console.log('Event Date: ', eventDate)
     })
 
-    // click event date
     cy.xpath('//div[@id=\"__next\"]/div/main/div/header/div[3]/div[3]/section/div/div/div/div/input').click()
-
     cy.get('.ant-picker-month-btn').click()
     cy.get('tr:nth-child(2) > .ant-picker-cell:nth-child(3) > .ant-picker-cell-inner').click()
     cy.get('.ant-picker-year-btn').click()
     cy.get('.ant-picker-cell-selected > .ant-picker-cell-inner').click()
-
-    ///
     cy.xpath('//div[@id=\"__next\"]/div/main/div/header/div[3]/div[3]/section/div/div[2]/span/input').click()
     cy.find('.ant-tooltip-open > .search_box_field_auto').click()
     cy.find('.ant-tooltip-open > .search_box_field_auto').dblclick()
-    ///
-
     cy.get('.ant-tooltip-open > .search_box_field_auto').click()
     cy.get('.ant-tooltip-open > .search_box_field_auto').type('Plaza Hotel{enter}')
     cy.get('.ant-tooltip-open > .search_box_field_auto').type('Cypress.io{enter}')
-    // console.log(vars["event_date"])
     cy.get('.d-flex:nth-child(1) > .Header_search_btn__1DsYn > img').click()
-    ///
     cy.get('.SearchResult_search_result_heading__20s2l').should('contains.text', 'Congratulations!')
     cy.xpath('//button[contains(.,\"Explore\")]').should('have.length.gt', 0)
-    ///
     cy.get('.SearchResult_search_result_card__2m0Pk:nth-child(2) .SearchResult_search_result_card_price__36J67').click()
     cy.get('.SearchResult_search_result_card__2m0Pk:nth-child(2) img').click()
-    ///
     cy.get('.band_detail_nav_item:nth-child(3) > .m-0').click()
-    ///
     cy.get('.BandConfiguration_price_tab__1cyLl').click({ force: true })
     cy.get('.BandConfiguration_band_conf_pink_bg__1OldT').click({ force: true })
-    /// band price
+
     cy.get('.BandConfiguration_tab__Epc4Q:nth-child(2) span:nth-child(1)').then((element) => {
       const bandPrice = element.text()
 
@@ -203,18 +194,22 @@ context('Contact Us Test', () => {
     cy.get('*[data-test=\"password\"]').type('CaptainAmerica501!')
     cy.get('.Header_login_btn__2tigy').click()
 
-    cy.xpath('//button[contains(.,\"Verify\")]').should('exist')
+    /// verify button and get otp here START ///
+    cy.xpath('//button[contains(.,\"Verify\")]').should('exist').then((value) => {
+      client.messages
+        .list({ limit: 1 })
+        .then((messages) =>
+          messages.forEach((m) => {
+            const returnedNumber = m.body.match(/\d+/)[0]
 
-    /// get otp here START ///
-    cy.visit('https://oksms.org/receive/15186726861')
+            cy.wrap(returnedNumber).as('userOtp0')
+          }))
+    })
     /// get otp here END ///
 
     cy.xpath('//button[contains(.,\"Verify\")]').should('exist')
-    const userOtp = 1234
-
-    console.log('userOtp: ', userOtp)
-    cy.get('@userOtp').then((value) => {
-      const otpArray = userOtp.split('')
+    cy.get('@userOtp0').then((value) => {
+      const otpArray = value.split('')
       const otpDigit1 = otpArray[0]
       const otpDigit2 = otpArray[1]
       const otpDigit3 = otpArray[2]
@@ -254,16 +249,20 @@ context('Contact Us Test', () => {
     cy.get('input[name=phone]').type('(518) 672-6861')
     cy.get('.Header_input_section__1HbL7:nth-child(5) .Header_eye_icon__QRxrT').click()
 
-    /// get otp here START ///
-    cy.visit('https://oksms.org/receive/15186726861')
-    const userOtp = 1234
+    /// check 'Verify' button exists, then get otp here START ///
+    cy.xpath('//button[contains(.,\"Verify\")]').should('exist').then((value) => {
+      client.messages
+        .list({ limit: 1 })
+        .then((messages) =>
+          messages.forEach((m) => {
+            const returnedNumber = m.body.match(/\d+/)[0]
 
+            cy.wrap(returnedNumber).as('userOtp1')
+          }))
+    })
     /// get otp here END ///
 
-    cy.xpath('//button[contains(.,\"Verify\")]').should('exist')
-    console.log('userOtp: ', userOtp)
-
-    cy.get('@userOtp').then((value) => {
+    cy.get('@userOtp1').then((value) => {
       const otpArray = value.split('')
       const otpDigit1 = otpArray[0]
       const otpDigit2 = otpArray[1]

@@ -198,12 +198,13 @@ context('Contact Us Test', () => {
     cy.xpath('//button[contains(.,\"Verify\")]').should('exist').then((value) => {
       client.messages
         .list({ limit: 1 })
-        .then((messages) =>
-          messages.forEach((m) => {
+        .then((messages) => {
+          return messages.forEach((m) => {
             const returnedNumber = m.body.match(/\d+/)[0]
 
             cy.wrap(returnedNumber).as('userOtp0')
-          }))
+          })
+        })
     })
     /// get otp here END ///
 
@@ -253,12 +254,13 @@ context('Contact Us Test', () => {
     cy.xpath('//button[contains(.,\"Verify\")]').should('exist').then((value) => {
       client.messages
         .list({ limit: 1 })
-        .then((messages) =>
-          messages.forEach((m) => {
+        .then((messages) => {
+          return messages.forEach((m) => {
             const returnedNumber = m.body.match(/\d+/)[0]
 
             cy.wrap(returnedNumber).as('userOtp1')
-          }))
+          })
+        })
     })
     /// get otp here END ///
 

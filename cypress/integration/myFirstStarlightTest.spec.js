@@ -4,8 +4,10 @@
 
 // const { it } = require("mocha")
 // const myVar = undefined;
-const accountSid = 'ACfc00480345d20df6a35bfc919be5e8cd'
-const authToken = '158335fa37795a97e6fed560b71c9c14'
+
+import credentials from '../fixtures/credentials.json'
+const accountSid = credentials.TWILIO_ACCOUNT_SID
+const authToken = credentials.TWILIO_AUTH_TOKEN
 const client = require('twilio')(accountSid, authToken)
 
 context('Contact Us Test', () => {

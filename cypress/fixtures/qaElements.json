@@ -1,0 +1,234 @@
+{
+    "mainPage": {
+        "browseBandsLinkId": "browse-bands-link",
+        "meetTheTeamLinkId": "meet-the-team-link",
+        "loginSignupButtonId": "login-signup-btn",
+        "contactUsLinkId": "contact-us-link",
+        "searchDateInputId": "search-date-input",
+        "searchVenueInputId": "search-venue-input",
+        "searchEventInputId": "search-event-input",
+        "runSearchButtonId": "run-search-btn",
+        "welcomeLinkId": "welcome-btn"
+    },
+    "searchBlade": {
+        "bookADemoButtonId": "book-a-demo-btn",
+        "hamburgerLinkId": "hamburger-link",
+        "myAccountLinkId": "my-account-link",
+        "logoutLinkId": "logout-link"
+
+    },
+    "resultsPage": {
+        "exploreBandButtonId": "explore-band-btn"
+    },
+    "bandPage": {
+        "configureThisBandLinkId": "configure-this-band-link",
+        "segmentsButtonId": "segments-btn",
+        "stringsButtonId": "strings-btn",
+        "travelButtonId": "travel-btn",
+        "bandButtonId": "band-btn",
+        "extrasButtonId": "extras-btn",
+        "totalPriceTextId": "ttl-price-text",
+        "notesLinkId": "notes-link",
+        "nextItemButtonId": "next-item-btn",
+        "bookNowButtonId": "book-now-btn",
+        "faqQuestionLinkId": "faq-ques-link",
+        "shareProposalLinkId": "share-prop-link",
+        "downloadProposalButtonId": "dl-prop-btn",
+        "saveProposalButtonId": "save-prop-btn"
+    },
+   "loginModal": {
+        "signupActionButtonId": "signup-action-btn",
+        "emailInputTextId": "email-input-text",
+        "passwordInputTextId": "password-input-text",
+        "forgotPasswordButtonId": "forgot-password-btn",
+        "loginActionButtonId": "login-action-btn"
+    }, 
+    "createAccountModal": {
+        "backToLoginButtonId": "back-to-login-btn",
+        "fNameInputId": "fname-account-input",
+        "lNameInputId": "lname-account-input",
+        "emailInputId": "email-account-input",
+        "phoneInputId": "phone-account-input",
+        "epCheckmark": "ep-account-check",
+        "passwordInputId": "password-account-input",
+        "companyNameInputId": "company-name-input",
+        "companyWebsiteInputId": "company-website-input", 
+        "joinUsBtn": "account-join-us-btn"
+    },
+    "verifyOtpModal": {
+        "otpInputFieldId": "otp-input-field",
+        "resetOtpLinkId": "reset-otp-link",
+        "backToSignupLinkId": "back-to-sign-up-link",
+        "verifyOtpButtonId": "verify-otp-btn"
+    }, 
+    "bookADemoModal1": {
+        "fNameInputId": "fname-input-field",
+        "lNameInputId": "lname-input-field",
+        "phoneInputId": "phone-input-field",
+        "emailInputId": "email-input-field",
+        "dateInputId": "date-input-field",
+        "venueInputId": "venue-input-field",
+        "eventInputId": "event-input-field",
+        "bookADemoNextButtonId": "book-a-demo-next"
+    },
+    "bookADemoModal2" : {
+        "welcomeParagraphId": "welcome-paragraph",
+        "15MinutesButtonId": "15-min-btn"
+    },
+    "bookADemoModal3": {
+        "welcomeConfirmationId": "web-confirmation",
+        "firstTimeOpenSelectionId": "first-time-open-selection",
+        "timeConfirmationButtonId": "time-confirm-btn"
+    },
+    "bookADemoModal4": {
+        "nameDetailsInputId": "name-details-input",
+        "emailDetailsInputId": "email-details-input",
+        "messageDetailsInputId": "msg-details-input",
+        "scheduleEventButtonId": "schedule-event-btn"
+    },
+    "contactUsPage": {
+        "fNameInputId": "fname-input",
+        "lNameInputId": "lname-input",
+        "phoneInputId": "phone-input",
+        "emailInputId": "email-input",
+        "eventDateInputId": "event-date-input",
+        "venueInputId": "venue-input",
+        "eventTypeInputId": "event-type-input",
+        "hearAboutUsInputId": "hear-about-us-input",
+        "contactReasonInputId": "contact-reason-input",
+        "messageInputId": "message-input",
+        "contactSubmitButtonId": "contact-submit-btn",
+        "bandAvailabilityButtonId": "band-av-btn"
+    },
+    "portal": {
+        "superAdmin": {
+            "navbar": {
+                "dashboardLinkId": "portal-dash-link",
+                "leadsLinkId": "portal-leads-link",
+                "eventsLinkId": "portal-events-link",
+                "subEventsLinkId": "portal-sub-events-link",
+                "subContractsLinkId": "portal-sub-contracts-link",
+                "notificationLinkId": "portal-notification-link",
+                "notificationModalTextId": "notification-modal-text",
+                "notificationModalId": "notification-modal",
+                "weddingPartiesTextId": "wedding-parties-text"
+
+            },
+            "leadsPage": {
+                "fromDateInputId": "from-date-input",
+                "toDateInputId": "to-date-input",
+                "typeSelectDropdownId": "type-select-dropdown",
+                "searchInputFieldId": "search-input-field",
+                "searchButtonId": "search-btn",
+                "bandSelectDropdownId": "band-select-dropdown",
+                "statusSelectDropdownId": "status-select-dropdown"
+            },
+            "leadsBasicInfoPage": {
+                "basicInfoButtonId": "basic-info-btn",
+                "configButtonId": "config-btn",
+                "expensesButtonId": "expenses-btn",
+                "statusChangeLinkId": "status-change-link",
+                "totalPriceTextId": "total-price-text" 
+            },
+            "leadsExpensesDiscountPage": {
+                "addAmountLinkId": "add-amt-link",
+                "byAmountInputId": "by-amount-input",
+                "amountConfirmButtonId": "amount-confirm-btn",
+                "amountUpdateButtonId": "amount-update-btn",
+                "confirmationTextId": "confirmation-text",
+                "confirmUpdateButtonId": "confirm-update-btn",
+                "confirmationModalId": "confirmation-modal"
+            }
+        },
+        "client": {
+            "navbar": {
+                "savedProposalButton": "portal-prop-btn"
+            },
+            "savedProposalsMainPage": {
+                "bandPriceTextId": "band-price-text",
+                "bandSelectionTextId": "band-sel-text",
+                "piecesTextId": "pieces-text",
+                "deleteProposalButtonId": "del-prop-btn",
+                "dateTimeTextId": "date-time-text",
+                "venueTextId": "venue-text",
+                "shareConfigLinkId": "share-config-link",
+                "editConfigLinkId": "edit-config-link",
+                "inviteCustomerLinkId": "invite-customer-link",
+                "deleteProposalButtonId": "dl-prop-btn",
+                "bookBandButtonId": "book-band-btn",
+                "areYouSureTextId": "are-you-sure-text",
+                "cancelProceeedButtonId": "cancel-proceed-btn",
+                "confirmProceedButtonId": "confirm-proceed-btn",
+            },
+            "contractIntroPage": {
+                "timeRemainingTextId": "time-rem-text",
+                "inProgressTextId": "in-progress-text",
+                "proceedToContractButtonId": "proceed-to-contract-btn"
+            },
+            "contractInfoPage": {
+                "contractInfoTextId": "contract-info-text",
+                "titleDropdownId": "title-dropdown",
+                "signerFnameInputId": "signer-fname-input",
+                "signerLnameInputId": "signer-lname-input",
+                "signerEmailInputId": "signer-email-input",
+                "signerDayPhoneInputId": "signer-day-phone-input",
+                "signerAddressInputId": "signer-address-input",
+                "brideFnameInputId": "bride-fname-input",
+                "brideLnameInputId": "bride-lname-input",
+                "groomFnameInputId": "groom-fname-input",
+                "groomLnameInputId": "groom-lname-input",
+                "contractDatetTextId": "contract-date-text",
+                "eventDateContractTextId": "event-date-contract-text",
+                "locationTextId": "location-text",
+                "eventTypeTextId": "event-type-text",
+                "bandContractTextId": "band-contract-text",
+                "eventDropdownInputId": "event-dropdown-input",
+                "venueDropdownInputId": "venue-dropdown-input",
+                "contractNextTextId": "contract-next-text",
+                "contractBackTextId": "contract-back-text"
+            },
+            "contractPaymentSchedulePage": {
+                "ceremonyOtTextId": "cer-ot-text",
+                "cocktailOtTextId": "cocktail-ot-text",
+                "receptionOtTextId": "reception-ot-text",
+                "ceremonyToggleId": "cer-toggle",
+                "cocktailToggleId": "cocktail-toggle",
+                "receptionToggleId": "reception-toggle",
+                "ceremonyPerformersId": "cer-perf-text",
+                "cocktailPerformersId": "cocktail-perf-text",
+                "receptionPerformersId": "reception-perf-text",
+                "ceremonyPricingTextId": "cer-pricing-text",
+                "cocktailPricingTextId": "cocktail-pricing-text",
+                "receptionPricingTextId": "reception-pricing-text",
+                "dueDateTextId": "due-date-text",
+                "totalPriceLinkId": "ttl-price-link",
+                "contractBackLinkId": "contract-back-link",
+                "previewContractButtonId": "preview-contract-btn",
+                "makePaymentButtonId": "make-payment-btn"
+            },
+            "contractCreditCardPage": {
+                "ccNameInputId": "cc-name-input",
+                "ccNumberInputId": "cc-number-input",
+                "ccExpirationInputId": "cc-exp-input",
+                "ccCvcInputId": "cc-cvc-input",
+                "ccAddressInputId": "cc-address-input",
+                "ccStateInputId": "cc-state-input",
+                "ccCityInputId": "cc-city-input",
+                "ccCountryInputId": "cc-country-input",
+                "ccZipInputId": "cc-zip-input",
+                "ccBackButtonId": "cc-back-btn",
+                "ccForwardButtonId": "cc-fwd-btn"
+            },
+            "contractPaymentSuccessPage": {
+                "paymentSuccessModalId": "payment-success-modal",
+                "paymentSuccessTextId": "payment-success-text",
+                "amountPaidTextId": "amount-pd-text",
+                "previewContractButtonId": "prev-contract-btn",
+                "signContractButtonId": "sign-contract-btn",
+                "completedTextId": "completed-text",
+                "completedContractButtonId": "completed-cont-btn",
+                "awaitingApprovalTextId": "awaiting-approval-text"
+            }
+        }
+    }
+}

@@ -17,6 +17,13 @@
 import './commands'
 
 require('cypress-xpath')
+require('cypress-dark')
+require('cypress-mailosaur')
+
+const {downloadFile} = require('cypress-downloadfile/lib/addPlugin')
+module.exports = (on, config) => {
+  on('task', {downloadFile})
+}
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')

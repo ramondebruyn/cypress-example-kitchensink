@@ -24,6 +24,9 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 import '@testing-library/cypress/add-commands'
+import 'cypress-iframe'
+
+require('cypress-downloadfile/lib/downloadFileCommand')
 
 Cypress.Commands.add('setLocalStorage', (key, value) => {
   cy.window().then((window) => {

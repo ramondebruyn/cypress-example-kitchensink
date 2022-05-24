@@ -15,7 +15,6 @@
         "hamburgerLinkId": "#hamburger-link",
         "myAccountLinkId": "#my-account-link",
         "logoutLinkId": "#logout-link"
-
     },
     "resultsPage": {
         "exploreBandButtonId": "#explore-band-btn"
@@ -88,6 +87,7 @@
     },
     "contactUsPage": {
         "fNameInputId": "#fname-input",
+        "fNameInputId": "#fname-input",
         "lNameInputId": "#lname-input",
         "phoneInputId": "#phone-input",
         "emailInputId": "#email-input",
@@ -142,7 +142,7 @@
         },
         "client": {
             "navbar": {
-                "savedProposalButton": "#portal-prop-btn"
+                "savedProposalButtonId": "#portal-prop-btn"
             },
             "savedProposalsMainPage": {
                 "bandPriceTextId": "#band-price-text",
